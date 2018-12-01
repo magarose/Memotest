@@ -1,0 +1,187 @@
+body{
+    margin: 2% auto;
+    background-image: url("img/fondo.jpg");
+    
+    .cont1{
+        width: 40%;
+        border: solid 10px;
+        border-radius: 15px;
+        padding-bottom: 3%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Pangolin', cursive;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #F8E0E6;
+
+        h1{
+            font-family: 'Pacifico';
+            font-size: 40px;
+            color: #0080FF;
+            margin: 0%;
+        }
+        .cinput{
+            width: 90%;
+            
+        }
+        input{
+            width: 95%;
+            height: 20px;
+            border:solid 3px #FE2E9A;
+            font-family: 'Pangolin', cursive;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .btn{
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin-left: 5%;
+           button{
+               height: 35px;
+               background-color: orangered;
+               border: none;
+               border-radius: 12px;
+               color: whitesmoke;
+                margin-bottom: 8px;  
+                font-family: 'Pangolin', cursive;
+                font-size: 20px;
+            }
+            button:hover{
+                background-color: orange;;
+            }
+        }
+        #ups{
+            width: 90%;
+            background-color: lightcoral;
+            color: crimson;
+            padding:0%;
+            margin-top: 15px;
+            margin-left: 5%;
+            border-radius: 12px; 
+        }
+    }
+
+    .cont2{
+        position: absolute;
+        width: 40%;
+        height:90%;
+        border: solid 10px;
+        border-radius: 15px;
+        padding: 0% 8% 5% 8%;
+        margin-left: 20%;
+        text-align: center;
+        font-family: 'Pangolin', cursive;
+        font-size: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        
+        
+        h2{
+            font-family: 'Pacifico';
+            font-size: 40px;
+            color: #0080FF;
+            margin: 0%;
+            margin-bottom: 0%;
+        }
+
+        .hola{
+            p{
+                margin: 0px;
+                font-size: 25px;
+            }
+        }
+        .find{
+            p{
+                margin: 0px;
+            }
+            .int{
+                color:  #0080FF;
+                font-weight: bold;
+            }
+            .lev{
+                margin-bottom: 5%;
+            }
+        }
+        img{
+            width: 20%;
+            border: solid 2px orange;
+        
+        }
+        .flip{
+            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+            transition: all 0.5s linear;
+        }
+
+        .noPointer {
+            pointer-events: none;
+         }
+    
+         .grey{
+             opacity: 0.5;
+             color: rgba(255, 255, 255, 0.5);
+         }
+
+        .try{
+            background-color: whitesmoke;
+            width: 88%;
+            display: flex; 
+            justify-content: center;
+            margin-left: 6%;
+            margin-top: 13px;
+            border: solid 4px #0080FF;
+
+            border-radius: 12px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            span{
+                color: orange;
+            }
+        }
+    }
+    .cont3{
+        position: relative;
+        width: 40%;
+        height: 40%;
+        border: solid 5px;
+        border-radius: 15px;
+        padding-bottom: 3%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: 'Pangolin', cursive;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #F8E0E6;
+        button{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center; 
+                height: 15%;
+                width: 35%;
+                background-color: orangered;
+                border: none;
+                border-radius: 12px;
+                color: whitesmoke;
+                margin-bottom: 8px;  
+                font-family: 'Pangolin', cursive;
+                font-size: 20px;
+                padding: 2%;
+        }
+    }
+    .hide {
+        display:none;
+    }
+}
+
+@media (max-width: 800px){
+
+}

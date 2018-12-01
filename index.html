@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Pangolin" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Memotest</title>
+</head>
+
+<body>
+    <div id='container1' class='cont1 hide' >
+        <div id='encabezado'>
+            <h1>Memotest</h1>
+            <div id='text'>
+                <p>Hola! 👋 Vamos a jugar al Memotest <br>
+                     Pero antes de empezar... <br>
+                     Cuál es tu nombre <span style='color: red'>?</span></p>
+            </div>
+        </div>
+        <div id='containerInput' class="cInput">
+            <input id='input' class= 'in-put' type="text" placeholder="Nombre"/>
+        </div>
+
+        <div id='btns' class='btn'>
+            <p>Con qué dificultad te gustaría jugar?</p>
+            <button id= 'FACIL' class= 'level'> FACIL </button>
+            <button id= 'INTERMEDIO'class= 'level'>INTERMEDIO</button>
+            <button id= 'DIFICIL' class = 'level' >DIFICIL </button>
+
+        </div>
+        <div id='ups' class='hide'>
+            <p> UPSS... el nombre es requerido </p>
+        </div>
+    </div>
+
+    <div id='container2' class='cont2 hide'>
+        <div id ='encabcont2'>
+            <h2>Memotest</h2>
+
+            <div id='holaName' class='hola'>
+
+            </div>
+            <div id='encuentra' class= "find">
+            
+                <p>Encontra todos los pares en menos de <span class= 'int'></span> intentos</p>
+                <p class='lev'> Nivel <br> <span class = 'nivel'> </span></p>
+    
+            </div>
+        </div>
+        
+        <div class="contenido">
+            <div id='pics' class='pic'>
+                    <img data-id='1' id= 'img1' data-img="" class='anana' src='img/tapada.jpg'>
+                    <img data-id='2' id= 'img2'data-img="" class='anana' src='img/tapada.jpg'>
+                    <img data-id='3' id= 'img3' data-img="" class='anana' src='img/tapada.jpg'>
+                    <img data-id='4' id= 'img4'data-img="" class='anana' src='img/tapada.jpg'>
+                    <img data-id='5' id= 'img5' data-img="" class='anana ' src='img/tapada.jpg'>
+                    <img data-id='6' id= 'img6' data-img="" class='anana ' src='img/tapada.jpg'>
+                    <img data-id='7' id= 'img7' data-img="" class='anana ' src='img/tapada.jpg'>
+                    <img data-id='8' id= 'img8' data-img="" class='anana ' src='img/tapada.jpg'>
+                    <img data-id='9' id= 'img9' data-img="" class='anana ' src='img/tapada.jpg'>
+                    <img data-id='10' id='img10' data-img="" class='anana ' src='img/tapada.jpg'>
+                    <img data-id='11' id='img11'data-img="" class='anana ' src='img/tapada.jpg'>
+                    <img data-id='12' id='img12' data-img=""class='anana ' src='img/tapada.jpg'>
+            </div>
+                <div id='intentos' class='try'> 
+                Intentos:  <span class='num'> </span>
+                </div>
+       </div>
+        
+    </div>
+    <div id= 'container3' class='cont3 hide'>
+
+        <p class='winlost'>  <span id='result'></span> </p>
+      
+        <button id='reload' class='playAgain'>VOLVER A JUGAR </button> 
+
+    </div>
+
+
+        <script src='https://code.jquery.com/jquery-3.3.1.min.js'> </script> 
+        <script src='index.js'> </script>
+</body>
+
+</html>
