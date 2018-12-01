@@ -2,7 +2,7 @@ body {
   margin: 2% auto;
   background-image: url("img/fondo.jpg");
 }
-body .cont1 {
+body .cont1, body .cont3 {
   width: 40%;
   border: solid 10px;
   border-radius: 15px;
@@ -17,16 +17,16 @@ body .cont1 {
   font-weight: bold;
   background-color: #F8E0E6;
 }
-body .cont1 h1 {
+body .cont1 h1, body .cont3 h1 {
   font-family: "Pacifico";
   font-size: 40px;
   color: #0080FF;
   margin: 0%;
 }
-body .cont1 .cinput {
+body .cont1 .cinput, body .cont3 .cinput {
   width: 90%;
 }
-body .cont1 input {
+body .cont1 input, body .cont3 input {
   width: 95%;
   height: 20px;
   border: solid 3px #FE2E9A;
@@ -34,13 +34,13 @@ body .cont1 input {
   font-size: 18px;
   font-weight: bold;
 }
-body .cont1 .btn {
+body .cont1 .btn, body .cont3 .btn {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin-left: 5%;
 }
-body .cont1 .btn button {
+body .cont1 .btn button, body .cont3 .btn button {
   height: 35px;
   background-color: orangered;
   border: none;
@@ -50,10 +50,10 @@ body .cont1 .btn button {
   font-family: "Pangolin", cursive;
   font-size: 20px;
 }
-body .cont1 .btn button:hover {
+body .cont1 .btn button:hover, body .cont3 .btn button:hover {
   background-color: orange;
 }
-body .cont1 #ups {
+body .cont1 #ups, body .cont3 #ups {
   width: 90%;
   background-color: lightcoral;
   color: crimson;
@@ -117,8 +117,7 @@ body .cont2 .try {
   width: 88%;
   display: flex;
   justify-content: center;
-  margin-left: 6%;
-  margin-top: 13px;
+  margin: auto;
   border: solid 4px #0080FF;
   border-radius: 12px;
   padding-top: 10px;
@@ -129,30 +128,17 @@ body .cont2 .try span {
 }
 body .cont3 {
   position: relative;
-  width: 40%;
   height: 40%;
   border: solid 5px;
-  border-radius: 15px;
-  padding-bottom: 3%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "Pangolin", cursive;
-  font-size: 20px;
-  font-weight: bold;
-  background-color: #F8E0E6;
 }
 body .cont3 button {
   display: flex;
   justify-content: center;
+  margin: auto;
   text-align: center;
-  align-items: center;
   height: 15%;
   width: 35%;
-  background-color: orangered;
+  background-color: orange;
   border: none;
   border-radius: 12px;
   color: whitesmoke;
@@ -160,6 +146,18 @@ body .cont3 button {
   font-family: "Pangolin", cursive;
   font-size: 20px;
   padding: 2%;
+}
+body .cont3 button :hover {
+  background-color: orangered;
+}
+body .cont3 table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: auto;
+}
+body .cont3 table td {
+  border: 1px solid black;
+  text-align: center;
 }
 body .hide {
   display: none;

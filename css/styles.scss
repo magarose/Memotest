@@ -2,7 +2,7 @@ body{
     margin: 2% auto;
     background-image: url("img/fondo.jpg");
     
-    .cont1{
+    .cont1, .cont3{
         width: 40%;
         border: solid 10px;
         border-radius: 15px;
@@ -130,10 +130,8 @@ body{
             width: 88%;
             display: flex; 
             justify-content: center;
-            margin-left: 6%;
-            margin-top: 13px;
+            margin: auto;
             border: solid 4px #0080FF;
-
             border-radius: 12px;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -145,29 +143,17 @@ body{
     }
     .cont3{
         position: relative;
-        width: 40%;
         height: 40%;
         border: solid 5px;
-        border-radius: 15px;
-        padding-bottom: 3%;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-family: 'Pangolin', cursive;
-        font-size: 20px;
-        font-weight: bold;
-        background-color: #F8E0E6;
+
         button{
                 display: flex;
                 justify-content: center;
+                margin: auto;
                 text-align: center;
-                align-items: center; 
                 height: 15%;
                 width: 35%;
-                background-color: orangered;
+                background-color: orange;
                 border: none;
                 border-radius: 12px;
                 color: whitesmoke;
@@ -175,6 +161,18 @@ body{
                 font-family: 'Pangolin', cursive;
                 font-size: 20px;
                 padding: 2%;
+                :hover{
+                    background-color: orangered;
+                }
+        }
+        table{
+            border-collapse: collapse; 
+            width: 70%;
+            margin: auto;
+             td{
+                border: 1px solid black;
+                text-align: center;
+            }
         }
     }
     .hide {
