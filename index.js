@@ -25,7 +25,7 @@ const imagenes = [
 $('#container1').removeClass('hide')
 $('#container2').addClass('hide')
 
-// para poner el nombre y que comienze el juego, sino que aparazca 
+// para poner el nombre en el input y que aparezca el juego, sino que aparezca el cartel UPS
 $('button').on('click', function () {
 
     var name = $('#input').val()
