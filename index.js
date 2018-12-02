@@ -91,6 +91,8 @@ $('.anana').on('click', function (e) {
                 id: $(this).attr('id'),
                 img: $(this).attr('data-img')
             }
+            $(primerClick).unbind('click')
+            
         } else if (clicks == 2) {
             segundoClick = {
                 id: $(this).attr('id'),
