@@ -124,7 +124,7 @@ $('.anana').on('click', function (e) {
             setTimeout(function () {
                 $('#' + primerClick.id).attr('src', 'img/tapada.jpg').removeClass('flip')
                 $('#' + segundoClick.id).attr('src', 'img/tapada.jpg').removeClass('flip')
-            }, 0800);
+            }, 0700);
 
         }
 
