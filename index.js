@@ -21,13 +21,10 @@ const imagenes = [
     'img/zapas.jpg',
 ]
 
-
 $('#container1').removeClass('hide')
 $('#container2').addClass('hide')
-
 // para poner el nombre en el input y que aparezca el juego, sino que aparezca el cartel UPS
 $('button').on('click', function () {
-
     var name = $('#input').val()
         if (name == '') {
             $('#ups').removeClass('hide')
@@ -57,33 +54,23 @@ function level() {
         $('.int').append(intentos)
         $('.nivel').append(nivel)
     })
-
-
 }
 level()
-
-
-
 //funcion para que se mezclen las fotos
-
 const desordenado = shuffle(imagenes)
-
 function shuffle(imagenes) {
+
     for (let i = imagenes.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [imagenes[i], imagenes[j]] = [imagenes[j], imagenes[i]];
     }
-
     return imagenes;
 }
-
 var imagenesLength = $('.anana').length ///pusheo todos los .anana del html en una variable
-
 for (var i = 0; i < imagenes.length; i++) {
     $('.anana').eq(i).attr('data-img', imagenes[i])
 
 }///en attr data imagen le pusheo las imagenes del const imagenes
-
 
 //todo lo que tiene que pasar una vez que hago click en la imagen
 
@@ -142,7 +129,6 @@ function winLost() {
         console.log ('ganaste')
         guardar_localStorage ();
 
-
     } else if (jugadas == intentos && aciertos < 6) {
         $('#container2').css('opacity', '0.5')
         $('#container3').removeClass('hide')
@@ -150,27 +136,14 @@ function winLost() {
          $('img').unbind('click')
          console.log ('perdiste')
         guardar_localStorage ();
-    
     }
     $('#reload').on('click', function () {
         location.reload()
 
     })
 
-    
-
 }
 ///localStorage
-
-    function obtener_localStorage (){
-
-        let data = localStorage.getItem('data');
-        let datos = localStorage.getItem('datos')
-
-        console.log(data)
-        console.log(datos)
-
-    };
     
     function guardar_localStorage (){
         let rank

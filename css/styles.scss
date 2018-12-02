@@ -87,15 +87,15 @@ body{
         }
 
         .hola{
+            margin: auto;
             p{
-                margin: 0px;
+               
                 font-size: 20px;
             }
         }
         .find{
-            p{
-                margin: 0px;
-            }
+            margin: auto;
+        
             .int{
                 color:  #0080FF;
                 font-weight: bold;
@@ -107,7 +107,7 @@ body{
 
         .contenido {
             width: 100%;
-            padding: 0%;
+            padding: none;
             height: 50%;
                 img{
                     width: 20%;
@@ -163,9 +163,6 @@ body{
                     font-family: 'Pangolin', cursive;
                     font-size: 15px;
                     padding: 2%;
-                    .playAgain:hover{
-                        background-color: orangered;
-                    }
             }
             table{
                 border-collapse: collapse; 
