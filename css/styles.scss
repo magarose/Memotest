@@ -119,10 +119,6 @@ body{
                     transform-style: preserve-3d;
                     transition: all 0.5s linear;
                 }
-
-                .noPointer {
-                    pointer-events: none;
-                }
             
                 .grey{
                     filter: grayscale(100%);

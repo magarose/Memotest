@@ -98,7 +98,6 @@ $('.anana').on('click', function (e) {
         $(this).attr('src', visible)
 
         clicks = clicks + 1
-         $(this).addClass('.noPointer')
 
         if (clicks == 1) {
             primerClick = {
@@ -124,7 +123,7 @@ $('.anana').on('click', function (e) {
             setTimeout(function () {
                 $('#' + primerClick.id).attr('src', 'img/tapada.jpg').removeClass('flip')
                 $('#' + segundoClick.id).attr('src', 'img/tapada.jpg').removeClass('flip')
-            }, 0700);
+            }, 0850);
 
         }
 
