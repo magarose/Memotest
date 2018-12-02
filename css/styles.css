@@ -24,10 +24,10 @@ body .cont1 h1, body .cont3 h1 {
   margin: 0%;
 }
 body .cont1 .cinput, body .cont3 .cinput {
-  width: 90%;
+  width: 80%;
 }
 body .cont1 input, body .cont3 input {
-  width: 95%;
+  width: 80%;
   height: 20px;
   border: solid 3px #FE2E9A;
   font-family: "Pangolin", cursive;
@@ -37,8 +37,8 @@ body .cont1 input, body .cont3 input {
 body .cont1 .btn, body .cont3 .btn {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin-left: 5%;
+  width: 80%;
+  margin: auto;
 }
 body .cont1 .btn button, body .cont3 .btn button {
   height: 35px;
@@ -64,12 +64,12 @@ body .cont1 #ups, body .cont3 #ups {
 }
 body .cont2 {
   position: absolute;
-  width: 40%;
-  height: 90%;
+  width: 50%;
+  height: auto;
   border: solid 10px;
   border-radius: 15px;
-  padding: 0% 8% 5% 8%;
-  margin-left: 20%;
+  padding: 0% 5% 5% 5%;
+  margin-left: 18%;
   text-align: center;
   font-family: "Pangolin", cursive;
   font-size: 20px;
@@ -96,63 +96,66 @@ body .cont2 .find .int {
 body .cont2 .find .lev {
   margin-bottom: 5%;
 }
-body .cont2 img {
+body .cont2 .contenido {
+  width: 100%;
+}
+body .cont2 .contenido img {
   width: 20%;
   border: solid 2px orange;
 }
-body .cont2 .flip {
+body .cont2 .contenido .flip {
   transform: rotateY(180deg);
   transform-style: preserve-3d;
   transition: all 0.5s linear;
 }
-body .cont2 .noPointer {
+body .cont2 .contenido .noPointer {
   pointer-events: none;
 }
-body .cont2 .grey {
+body .cont2 .contenido .grey {
   opacity: 0.5;
-  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
-body .cont2 .try {
+body .cont2 .contenido .try {
   background-color: whitesmoke;
   width: 88%;
   display: flex;
   justify-content: center;
   margin: auto;
+  margin-top: 2%;
   border: solid 4px #0080FF;
   border-radius: 12px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-body .cont2 .try span {
+body .cont2 .contenido .try span {
   color: orange;
 }
 body .cont3 {
   position: relative;
+  width: 30%;
   height: 40%;
   border: solid 5px;
 }
-body .cont3 button {
+body .cont3 .playAgain {
   display: flex;
   justify-content: center;
   margin: auto;
   text-align: center;
-  height: 15%;
-  width: 35%;
+  height: 20%;
   background-color: orange;
   border: none;
   border-radius: 12px;
   color: whitesmoke;
   margin-bottom: 8px;
   font-family: "Pangolin", cursive;
-  font-size: 20px;
+  font-size: 15px;
   padding: 2%;
 }
-body .cont3 button :hover {
+body .cont3 .playAgain .playAgain:hover {
   background-color: orangered;
 }
 body .cont3 table {
   border-collapse: collapse;
-  width: 70%;
   margin: auto;
 }
 body .cont3 table td {
@@ -161,6 +164,33 @@ body .cont3 table td {
 }
 body .hide {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .cont1 {
+    display: flex;
+    flex-direction: wrap;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .cont3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 2% 1% 2%;
+  }
+  .cont3 button {
+    width: 80%;
+  }
+  .cont3 table {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

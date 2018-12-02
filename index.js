@@ -136,17 +136,62 @@ function winLost() {
     if (aciertos == 6 && jugadas <= intentos) {
         $('#container2').css('opacity', '0.5')
         $('#container3').removeClass('hide')
-        $('#result').append(`GANASTE🎉 `)
+        $('#result').append(`GANASTE🎉 con ${jugadas} intentos`)
         $('img').unbind('click')
+        guardar_localStorage ();
+
+
     } else if (jugadas == intentos && aciertos < 6) {
         $('#container2').css('opacity', '0.5')
         $('#container3').removeClass('hide')
         $('#result').append(`PERDISTE 😢`)
         $('img').unbind('click')
+        guardar_localStorage ();
+    
     }
     $('#reload').on('click', function () {
         location.reload()
 
     })
+
+    
+
 }
+///localStorage
+
+    function obtener_localStorage (){
+
+        let data = localStorage.getItem('data');
+        let datos = localStorage.getItem('datos')
+
+        console.log(data)
+        console.log(datos)
+
+    };
+    
+    function guardar_localStorage (){
+        let rank
+
+        let datos = {
+            nombre: $('#input').val(),
+            nivel: $('.level').attr('id'),
+            intentos: jugadas
+        }
+
+        if (rank == null) {
+            rank = [];
+          };
+         
+          rank.push(datos);
+
+        let data = 'memotest'
+        localStorage.setItem('memotest', JSON.stringify (rank));
+        console.log (rank)
+
+        for (let i=0; i < rank.length; i++) {
+            $('#nameLS').append(`<p>${rank[i].nombre}</p>`)
+            $('#nivelLS').append(`<p>${rank[i].nivel}</p>`)
+            $('#intentosLS').append(`<p>${rank[i].intentos}</p>`)
+          }
+    };
 
