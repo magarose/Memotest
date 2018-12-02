@@ -63,6 +63,7 @@ function level() {
 level()
 
 
+
 //funcion para que se mezclen las fotos
 
 const desordenado = shuffle(imagenes)
@@ -116,6 +117,7 @@ $('.anana').on('click', function (e) {
         if (primerClick.id != segundoClick.id && primerClick.img == segundoClick.img) {
                 $('#' + primerClick.id).addClass("grey")
                 $('#' + segundoClick.id).addClass("grey")
+                $('.grey').unbind('click')
 
                  aciertos = aciertos + 1;
         } else {
@@ -138,6 +140,7 @@ function winLost() {
         $('#container3').removeClass('hide')
         $('#result').append(`GANASTE🎉 con ${jugadas} intentos`)
         $('img').unbind('click')
+        console.log ('ganaste')
         guardar_localStorage ();
 
 
@@ -145,7 +148,8 @@ function winLost() {
         $('#container2').css('opacity', '0.5')
         $('#container3').removeClass('hide')
         $('#result').append(`PERDISTE 😢`)
-        $('img').unbind('click')
+         $('img').unbind('click')
+         console.log ('perdiste')
         guardar_localStorage ();
     
     }
