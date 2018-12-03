@@ -164,7 +164,7 @@ function winLost() {
 ///localStorage
     
     function guardar_localStorage (){
-        let rank
+        let rank = JSON.parse (localStorage.getItem('memotest'))
 
         let datos = {
             nombre: $('#input').val(),

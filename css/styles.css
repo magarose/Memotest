@@ -52,6 +52,7 @@ body .cont1 .btn button, body .cont3 .btn button {
 }
 body .cont1 .btn button:hover, body .cont3 .btn button:hover {
   background-color: orange;
+  cursor: pointer;
 }
 body .cont1 #ups, body .cont3 #ups {
   width: 90%;
@@ -112,6 +113,7 @@ body .cont2 .contenido img {
   width: 19%;
   height: 18%;
   border: solid 2px orange;
+  cursor: pointer;
 }
 body .cont2 .contenido .flip {
   transform: rotateY(180deg);

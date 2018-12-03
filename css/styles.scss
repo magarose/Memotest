@@ -1,7 +1,7 @@
 body{
     margin: 0.5% auto;
     background-image: url("img/fondo.jpg");
-    
+  
     .cont1, .cont3{
         width: 35%;
         border: solid 10px;
@@ -39,6 +39,7 @@ body{
             flex-direction: column;
             width: 80%;
             margin:auto;
+            
            button{
                height: 35px;
                background-color: orangered;
@@ -50,7 +51,8 @@ body{
                 font-size: 20px;
             }
             button:hover{
-                background-color: orange;;
+                background-color: orange;
+                cursor: pointer;
             }
         }
         #ups{
@@ -117,6 +119,7 @@ body{
                     width: 19%;
                     height:18%;
                     border: solid 2px orange;
+                    cursor: pointer;
                 
                 }
                 .flip{
