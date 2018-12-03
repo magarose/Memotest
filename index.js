@@ -5,6 +5,9 @@ var segundoClick
 var aciertos = 0;
 var intentos
 var jugadas = 0;
+var nivel
+
+
 
 const imagenes = [
     'img/alce.jpg',
@@ -36,26 +39,29 @@ $('button').on('click', function () {
             $('#container1').addClass('hide')
             $("#container2").removeClass('hide')
             $('#holaName').append(`<p> Hola ${name}</p>`)
+            console.log (name)
         }
+
 })
 
 ///realizo una funcion para establecer los niveles
 
-function level() {
     $('.level').on('click', function () {
-        var nivel = $(this).attr('id')
+        nivel = $(this).attr('id')
             if (nivel == 'FACIL') {
                 intentos = 18;
             } else if (nivel == 'INTERMEDIO') {
                 intentos = 12;
             } else if (nivel == 'DIFICIL') {
-                intentos = 9;
+                intentos = 1;
             }
-        $('.int').append(intentos)
-        $('.nivel').append(nivel)
+        $('.int').html(intentos)
+        $('.nivel').html(nivel)
+        console.log (nivel)
     })
-}
-level()
+
+
+
 //funcion para que se mezclen las fotos
 const desordenado = shuffle(imagenes)
 function shuffle(imagenes) {
@@ -75,32 +81,39 @@ for (var i = 0; i < imagenes.length; i++) {
 //todo lo que tiene que pasar una vez que hago click en la imagen
 
 $('.anana').on('click', function (e) {
-    $(this).addClass('flip')
-
-    const imgId = e.target.id
-    const id = $('#' + imgId).attr('data-id')
-    $('#' + imgId).attr('src', desordenado[id - 1])
-
     var visible = $(this).attr('data-img')
-        $(this).attr('src', visible)
 
         clicks = clicks + 1
 
         if (clicks == 1) {
+            $(this).attr('src', visible)
+
+            $(this).addClass('flip')
+            const imgId = e.target.id
+            const id = $('#' + imgId).attr('data-id')
+            $('#' + imgId).attr('src', desordenado[id - 1])
+
             primerClick = {
                 id: $(this).attr('id'),
                 img: $(this).attr('data-img')
             }
-            $(primerClick).unbind('click')
+            
             
         } else if (clicks == 2) {
-            segundoClick = {
+            $(this).attr('src', visible)
+
+            $(this).addClass('flip')
+            const imgId = e.target.id
+            const id = $('#' + imgId).attr('data-id')
+            $('#' + imgId).attr('src', desordenado[id - 1])
+                    segundoClick = {
                 id: $(this).attr('id'),
                 img: $(this).attr('data-img')
             }
 
         jugadas++
         $('.num').html(jugadas) //esto corresponde al contador de intentos
+        console.log(jugadas)
 
         if (primerClick.id != segundoClick.id && primerClick.img == segundoClick.img) {
                 $('#' + primerClick.id).addClass("grey")
@@ -108,15 +121,18 @@ $('.anana').on('click', function (e) {
                 $('.grey').unbind('click')
 
                  aciertos = aciertos + 1;
+                 console.log(aciertos)
+                clicks = 0;
         } else {
             setTimeout(function () {
                 $('#' + primerClick.id).attr('src', 'img/tapada.jpg').removeClass('flip')
                 $('#' + segundoClick.id).attr('src', 'img/tapada.jpg').removeClass('flip')
+                clicks = 0;
+
             }, 1000);
 
         }
 
-        clicks = 0;
         winLost()
     }
 })
@@ -152,7 +168,7 @@ function winLost() {
 
         let datos = {
             nombre: $('#input').val(),
-            nivel: $('.level').attr('id'),
+            nivelrank: nivel,
             intentos: jugadas
         }
 
@@ -168,7 +184,7 @@ function winLost() {
 
         for (let i=0; i < rank.length; i++) {
             $('#nameLS').append(`<p>${rank[i].nombre}</p>`)
-            $('#nivelLS').append(`<p>${rank[i].nivel}</p>`)
+            $('#nivelLS').append(`<p>${rank[i].nivelrank}</p>`)
             $('#intentosLS').append(`<p>${rank[i].intentos}</p>`)
           }
     };
