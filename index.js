@@ -118,6 +118,7 @@ $('.anana').on('click', function (e) {
         if (primerClick.id != segundoClick.id && primerClick.img == segundoClick.img) {
                 $('#' + primerClick.id).addClass("grey")
                 $('#' + segundoClick.id).addClass("grey")
+                $('.grey').css('cursor', 'default')
                 $('.grey').unbind('click')
 
                  aciertos = aciertos + 1;
