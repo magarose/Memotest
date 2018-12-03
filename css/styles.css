@@ -151,14 +151,18 @@ body .cont3 .playAgain {
   margin: auto;
   text-align: center;
   height: 20%;
-  background-color: orange;
+  background-color: orangered;
   border: none;
   border-radius: 12px;
   color: whitesmoke;
   margin-bottom: 8px;
-  font-family: "Pangolin", cursive;
+  font-family: "Pangolin", cursivex;
   font-size: 15px;
   padding: 2%;
+}
+body .cont3 .playAgain:hover {
+  background-color: orange;
+  cursor: pointer;
 }
 body .cont3 table {
   border-collapse: collapse;
