@@ -53,7 +53,7 @@ $('button').on('click', function () {
             } else if (nivel == 'INTERMEDIO') {
                 intentos = 12;
             } else if (nivel == 'DIFICIL') {
-                intentos = 1;
+                intentos = 9;
             }
         $('.int').html(intentos)
         $('.nivel').html(nivel)
@@ -151,9 +151,10 @@ function winLost() {
         $('#container2').css('opacity', '0.5')
         $('#container3').removeClass('hide')
         $('#result').append(`PERDISTE 😢`)
+        $('table').addClass('hide')
          $('img').unbind('click')
          console.log ('perdiste')
-        guardar_localStorage ();
+
     }
     $('#reload').on('click', function () {
         location.reload()
